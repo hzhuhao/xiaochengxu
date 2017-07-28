@@ -1,0 +1,143 @@
+/*首页分类  */
+.menu{
+  position:fixed;
+  top:0px;
+  width:100%;
+  height:40px;
+  background:#ffffff;
+  z-index:10000000;
+  border-bottom:1px solid #eee;
+  font-family: '微软雅黑';
+}
+.scroll-view_H{
+    white-space: nowrap;
+    margin-right:10px;
+    width: 97%;
+    height: 32px;
+}
+.nav_font{
+  font-size:18px;
+  line-height: 40px;
+  margin-left:20px;
+  display: inherit;
+  float:left;
+  color: #777;
+}
+.nav_hover{
+  font-size: 18px;
+  color:#3cc51f;
+}
+.top35{
+  margin-top: 45px;
+}
+/* banner */
+.slide-image{
+  width:100%;
+}
+/* 列表页  */
+.news_content{
+  margin: 0 auto;
+  width:95%;
+  /* height:140px; */
+  border-bottom:1px solid #f4f4f4;
+  font-family: '微软雅黑';
+  float: left;
+  padding-left: 10px;
+
+}
+.news_content_left{
+  width: 30%;
+  float: left;
+}
+.news_content_left image{
+  width: 100%;
+  padding: 20px 5px;
+  height: 75px;
+}
+.news_content_right{
+  width: 70%;
+  float: right;
+}
+.news_content_title{
+  padding: 20px 10px 0px 20px;
+}
+.news_content_title text{
+  font-size: 18px;
+}
+.news_content_views{
+  padding: 5px 20px;
+}
+.news_content_views image{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.news_content_views text{
+  font-size: 12px;
+  margin-right: 5px;
+  color: #ccc;
+}
+.news_content_other{
+  margin: 0 auto;
+  width:95%;
+   height:180px; 
+  border-bottom:1px solid #f4f4f4;
+  font-family: '微软雅黑';
+  float: left;
+  padding-left: 10px;
+}
+.news_content_top{
+   padding: 10px 10px 10px 0px;
+}
+.news_content_top text{
+  font-size: 18px; 
+}
+.news_content_main image{
+   width: 30%;
+   float: left;
+   height: 75px;
+   margin-right: 10px;
+}
+.news_content_bottom{
+  clear: both;
+  float: left;
+  width: 100%; 
+  padding-top: 5px;
+}
+.news_content_bottom text{
+  font-size: 12px;
+  margin-right: 10px;
+  color: #ccc;
+}
+.content_more{
+  text-align: center;
+  font-size: 12px;
+  font-family: '微软雅黑';
+  color: #eee;
+  margin-bottom: 10px;
+}
+/*刷新 */
+page{
+    position: relative
+}
+.refush{
+  background-color: #3cc51f;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius:100%;
+  box-shadow:0 0 1px #3cc51f inset; 
+  text-align: center;
+  display: table-cell;
+}
+.refush .refush_icon{
+  vertical-align: middle;
+  margin-top: 5px;
+}
+/*视频  */
+.news_content_main_vido{
+  padding:0px 10px;
+}
+

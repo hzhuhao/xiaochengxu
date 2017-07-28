@@ -1,0 +1,154 @@
+<!--banner  -->
+<!-- <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" height="150"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view> -->
+<import src="/template/information/loads.wxml" />
+<template is="loads" data="{{hidden:hid}}"/>
+
+<import src="/template/information/index/figure.wxml"/>
+<template is="figure" data="{{display:dis}}"/>
+
+<view class="menu">
+    <scroll-view class="scroll-view_H" scroll-x="true" >
+        <view id="{{menu_id}}" bindtap="click_menu" wx:for="{{menu}}" wx:for-index="menu_id" wx:for-item="item" class="nav_font">
+            <block wx:if="{{menu_id == menuStatic}}"><text class="nav_hover">{{item}}</text></block>
+            <block wx:else>{{item}}</block>
+        </view> 
+    </scroll-view>
+</view>
+<view class="top35"></view>
+<!-- 列表页  -->
+<view class="news_content" id="1" catchtap="detail">
+      <view class="news_content_left">
+          <image src="/images/tea.png"></image>
+      </view>
+      <view class="news_content_right">
+          <view class="news_content_title">
+              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+          </view>
+          <view class="news_content_views"> 
+            <text class="icon fa-user"></text>
+            <text>四茗</text>
+            <text class="icon fa-comment-o"></text>
+            <text>100阅读</text>  
+            <text class="icon fa-clock-o"></text>
+            <text>5小时前</text>
+          </view>
+      </view>
+</view>
+<view class="news_content" id="1" catchtap="detail">
+      <view class="news_content_left">
+          <image src="/images/tea.png"></image>
+      </view>
+      <view class="news_content_right">
+          <view class="news_content_title">
+              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+          </view>
+          <view class="news_content_views">
+            <text class="icon fa-user"></text>
+            <text>四茗</text>
+            <text class="icon fa-comment-o"></text>
+            <text>100阅读</text>  
+            <text class="icon fa-clock-o"></text>
+            <text>5小时前</text>
+          </view>
+      </view>
+</view>
+<view class="news_content" id="1" catchtap="detail">
+      <view class="news_content_left">
+          <image src="/images/tea.png"></image>
+      </view>
+      <view class="news_content_right">
+          <view class="news_content_title">
+              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+          </view>
+          <view class="news_content_views">
+            <text class="icon fa-user"></text>
+            <text>四茗</text>
+            <text class="icon fa-comment-o"></text>
+            <text>100阅读</text>  
+            <text class="icon fa-clock-o"></text>
+            <text>5小时前</text>
+          </view>
+      </view>
+</view>
+<view class="news_content_other" id="1" catchtap="detail">
+      <view class="news_content_top">
+         <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+      </view>
+      <view class="news_content_main">
+          <image src="/images/tea.png"></image>
+          <image src="/images/tea.png"></image>
+          <image src="/images/tea.png"></image>
+      </view>
+      <view class="news_content_bottom">
+          <text class="icon fa-user"></text>
+            <text>四茗</text>
+            <text class="icon fa-comment-o"></text>
+            <text>100阅读</text>  
+            <text class="icon fa-clock-o"></text>
+            <text>5小时前</text>
+      </view>
+</view>
+<view class="news_content_other" id="1" catchtap="detail">
+      <view class="news_content_top">
+         <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+      </view>
+      <view class="news_content_main">
+          <image src="/images/tea.png"></image>
+          <image src="/images/tea.png"></image>
+          <image src="/images/tea.png"></image>
+      </view>
+      <view class="news_content_bottom">
+          <text class="icon fa-user"></text>
+            <text>四茗</text>
+            <text class="icon fa-comment-o"></text>
+            <text>100阅读</text>  
+            <text class="icon fa-clock-o"></text>
+            <text>5小时前</text>
+      </view>
+</view>
+<view class="news_content" id="1" catchtap="detail">
+      <view class="news_content_left">
+          <image src="/images/tea.png"></image>
+      </view>
+      <view class="news_content_right">
+          <view class="news_content_title">
+              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+          </view>
+          <view class="news_content_views">
+            <text class="icon fa-user"></text>
+            <text>四茗</text>
+            <text class="icon fa-comment-o"></text>
+            <text>100阅读</text>  
+            <text class="icon fa-clock-o"></text>
+            <text>5小时前</text>
+          </view>
+      </view>
+</view>
+<view class="news_content_other" id="1" catchtap="detail">
+      <view class="news_content_top">
+         <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+      </view>
+      <view class="news_content_main">
+          <image src="/images/tea.png"></image>
+          <image src="/images/tea.png"></image>
+          <image src="/images/tea.png"></image>
+      </view>
+      <view class="news_content_bottom">
+          <text class="icon fa-user"></text>
+            <text>四茗</text>
+            <text class="icon fa-comment-o"></text>
+            <text>100阅读</text>  
+            <text class="icon fa-clock-o"></text>
+            <text>5小时前</text>
+      </view>
+</view>
+
+

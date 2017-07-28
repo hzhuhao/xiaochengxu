@@ -1,0 +1,98 @@
+@import "../index/index.wxss";
+#main{
+  font-family: '微软雅黑';
+}
+.title{
+  padding: 10px;
+  font-size: 20px;
+  font-style: block;
+}
+.numbers{
+  font-size: 14px;
+}
+
+.content{
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 15px;
+}
+.content image{
+  width: 100%;
+  padding: 10px 0px;
+}
+/*分享  */
+#to_share{
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+#to_share button{
+  width: 120px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #3cc51f;
+  border-radius:10px; 
+  position: relative;
+  opacity: 0.8
+}
+.share_icon{
+  position:absolute;
+  top:10px;
+  left:38%;
+  z-index:10000000;
+}
+.user_info{
+  float: left;
+  margin-left: 10px;
+  position: relative;
+  width: 45%;
+}
+.user_info image{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.user_info .info{
+  position: absolute;
+  top: 0;
+}
+.user_info .time{
+  position: absolute;
+  bottom: -5px;
+  font-size: 10px;
+}
+.shouc_btn{
+  width: 40%;
+  float: right;
+  margin-right: 20px;
+  position: relative;
+}
+.shouc_btn button{
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  background-color: #3cc51f;
+  border: none;
+  color: #fff;
+}
+/*相关推荐  */
+#push{
+  font-family: '微软雅黑';
+  margin-bottom: 25px;
+}
+.push_content_top{
+  border-left: 2px solid #3cc51f;
+  margin: 10px;
+  padding: 0px 10px;
+  font-size: 14px;
+}
+.margin20{
+  margin-top: 25px;
+  float: left;
+  width: 100%;
+  height: 20px;
+}

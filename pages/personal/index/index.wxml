@@ -1,0 +1,13 @@
+<view id="header">
+    <view class="content">
+    	<image src="{{userInfo.avatarUrl}}"></image>
+        <view class="nickname">{{userInfo.nickName}}</view>
+        <view class="orther">{{userInfo.province}}</view>
+    </view>
+</view>
+<view id="menus">
+    <view class="content" wx:for="{{y_menus}}" catchtap="detail">
+        <view class="view"><text>{{item.title}}</text></view>
+        <view class="right"><image src="/images/rightjian.png" style="width:14px;height:14px"></image></view>
+    </view>
+</view>

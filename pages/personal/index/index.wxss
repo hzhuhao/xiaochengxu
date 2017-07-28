@@ -1,0 +1,54 @@
+page{
+    background: #ebebeb;
+}
+#header{
+    width:100%;
+    height:180px;
+    background: #ffffff;
+    color:black;
+    font-family: '微软雅黑';
+}
+#header .content{
+    padding-top: 15px;
+    text-align: center;
+}
+#header .content image{
+    width:75px;
+    height:75px;
+    border-radius: 100px;
+}
+#header .content .nickname{
+    padding-top:10px;
+    font-size: 18px;
+}
+#header .content .orther{
+    padding-top:10px;
+    font-size:15px;
+}
+#menus{
+    background: #ffffff;
+    margin-top:10px;
+    height:auto;
+    width:100%;
+    font-family: '微软雅黑';
+    font-size:15px;
+}
+#menus .content{
+    height:45px;
+    border-bottom: 0.5px solid #ebebeb; 
+}
+#menus .content .view{
+    float: left;
+
+}
+#menus .content .view text{
+    font-size:15px;
+    line-height:45px;
+    padding-left:20px;
+}
+#menus .content .right{
+    height: 45px;
+    float: right;
+    margin-right:10px;
+    line-height: 45px;
+}
