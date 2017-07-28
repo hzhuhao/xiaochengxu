@@ -1,15 +1,17 @@
 "use strict";
-
+var app = getApp();  
 var root_path = "../../../";
 var index_obj = require(root_path+'function/information_index.js')
 var figure_obj = require(root_path+'function/information_figure.js')
 var api = require(root_path+'api/information_api.js');
 var menu_static = 0;
+var list = [];
 Page({
     
   data: {
     hid: false,
     animation:'',
+    list:list,
     menuStatic: menu_static,
     dis:"display_block",
     menu: ['推荐', '热点', '绿茶', '红茶', '黑茶', '白茶', '普洱'],
@@ -25,19 +27,24 @@ Page({
     indicatorDots:false,
   },
   onPullDownRefresh: function () {  //下拉刷新
-    wx.showToast({
-      title: 'loading...',
-      icon: 'loading'
-    })
-    console.log('onPullDownRefresh', new Date())
+    this.onLoad();
+    wx.stopPullDownRefresh;
   },
-  stopPullDownRefresh: function () {
-    wx.stopPullDownRefresh({
-      complete: function (res) {
-        console.log(res, new Date())
-      }
-    })
-  },
+  onLoad: function (opt) {  
+    var that = this; 
+    app.AjaxHttp.req('/index/getlist/catid/20/page/1', {}, function (res) {  
+      if (res.code == '200'){
+          that.setData({
+            list: res.data
+          });
+      }else{
+        wx.showToast({
+          title: res.msg,
+          icon:'',
+        })
+      }  
+    });
+  }, 
   onReady:function(){
       var that = this;
       setTimeout(function () {
@@ -56,15 +63,6 @@ Page({
       }else{
           figure_obj.set_figure_cookie();
       };
-      this.animation = wx.createAnimation({
-        duration: 1400,
-        timingFunction: linear, // "linear","ease","ease-in","ease-in-out","ease-out","step-start","step-end"
-        delay: 0,
-        transformOrigin: 50 % 50 % 0,
-        success: function (res) {
-          console.log("res")
-        }
-      });
   },
 
   detail: function(event) {

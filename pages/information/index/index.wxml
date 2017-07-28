@@ -24,135 +24,52 @@
 </view> 
  <view class="top35"></view> 
 <!-- 列表页  -->
-<view class="news_content" id="1" catchtap="detail">
-      <view class="news_content_left">
-          <image src="/images/tea.png"></image>
-      </view>
-      <view class="news_content_right">
-          <view class="news_content_title">
-              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
+<block wx:for-items="{{list}}">
+    <view wx:if="{{item.thumb.length == 1}}">
+       <view class="news_content" id="{{item.id}}" catchtap="detail">
+          <view class="news_content_left">
+              <image src="https://api.wx.huhao.me/{{item.thumb}}"></image>
           </view>
-          <view class="news_content_views"> 
-            <!-- <text class="icon fa-user"></text> -->
-            <!-- <image src="/images/logo.png"></image> -->
-            <text>四茗</text>
-            <text class="icon fa-comment-o"></text>
-            <text>100阅读</text>  
-            <text class="icon fa-clock-o"></text>
-            <text>5小时前</text>
+          <view class="news_content_right">
+              <view class="news_content_title">
+                  <text>{{item.title}}</text> 
+              </view>
+              <view class="news_content_views"> 
+                <text>{{item.author}}</text>
+                <text class="icon fa-comment-o"></text>
+                <text>{{item.views}}</text>  
+                <text class="icon fa-clock-o"></text>
+                <text>{{item.time}}</text>
+              </view>
           </view>
-      </view>
-</view>
-<view class="news_content" id="1" catchtap="detail">
-      <view class="news_content_left">
-          <image src="/images/tea.png"></image>
-      </view>
-      <view class="news_content_right">
-          <view class="news_content_title">
-              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
-          </view>
-          <view class="news_content_views">
-            <!-- <text class="icon fa-user"></text> -->
-            <text>四茗</text>
-            <text class="icon fa-comment-o"></text>
-            <text>100阅读</text>  
-            <text class="icon fa-clock-o"></text>
-            <text>5小时前</text>
-          </view>
-      </view>
-</view>
-<view class="news_content" id="1" catchtap="detail">
-      <view class="news_content_left">
-          <image src="/images/tea.png"></image>
-      </view>
-      <view class="news_content_right">
-          <view class="news_content_title">
-              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
-          </view>
-          <view class="news_content_views">
-            <!-- <text class="icon fa-user"></text> -->
-            <text>四茗</text>
-            <text class="icon fa-comment-o"></text>
-            <text>100阅读</text>  
-            <text class="icon fa-clock-o"></text>
-            <text>5小时前</text>
-          </view>
-      </view>
-</view>
-<view class="news_content_other" id="1" catchtap="detail">
-      <view class="news_content_top">
-         <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
-      </view>
-      <view class="news_content_main">
-          <image src="/images/tea.png"></image>
-          <image src="/images/tea.png"></image>
-          <image src="/images/tea.png"></image>
-      </view>
-      <view class="news_content_bottom">
-          <!-- <text class="icon fa-user"></text> -->
-            <text>四茗</text>
-            <text class="icon fa-comment-o"></text>
-            <text>100阅读</text>  
-            <text class="icon fa-clock-o"></text>
-            <text>5小时前</text>
-      </view>
-</view>
-<view class="news_content_other" id="1" catchtap="detail">
-      <view class="news_content_top">
-         <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
-      </view>
-      <view class="news_content_main">
-          <image src="/images/tea.png"></image>
-          <image src="/images/tea.png"></image>
-          <image src="/images/tea.png"></image>
-      </view>
-      <view class="news_content_bottom">
-          <!-- <text class="icon fa-user"></text> -->
-            <text>四茗</text>
-            <text class="icon fa-comment-o"></text>
-            <text>100阅读</text>  
-            <text class="icon fa-clock-o"></text>
-            <text>5小时前</text>
-      </view>
-</view>
-<view class="news_content" id="1" catchtap="detail">
-      <view class="news_content_left">
-          <image src="/images/tea.png"></image>
-      </view>
-      <view class="news_content_right">
-          <view class="news_content_title">
-              <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
-          </view>
-          <view class="news_content_views">
-            <!-- <text class="icon fa-user"></text> -->
-            <text>四茗</text>
-            <text class="icon fa-comment-o"></text>
-            <text>100阅读</text>  
-            <text class="icon fa-clock-o"></text>
-            <text>5小时前</text>
-          </view>
-      </view>
-</view>
-<view class="news_content_other" id="1" catchtap="detail">
-      <view class="news_content_top">
-         <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
-      </view>
-      <view class="news_content_main">
-          <image src="/images/tea.png"></image>
-          <image src="/images/tea.png"></image>
-          <image src="/images/tea.png"></image>
-      </view>
-      <view class="news_content_bottom">
-          <!-- <text class="icon fa-user"></text> -->
-            <text>四茗</text>
-            <text class="icon fa-comment-o"></text>
-            <text>100阅读</text>  
-            <text class="icon fa-clock-o"></text>
-            <text>5小时前</text>
-      </view>
-</view>
+  </view>
+    </view>
+    <view wx:elif="{{item.thumb.length > 1}}">
+         <view class="news_content_other" id="{{item.id}}" catchtap="detail">
+            <view class="news_content_top">
+              <text>{{item.title}}</text> 
+            </view>
+            <view class="news_content_main">
+              <!-- <block wx:for-items="{{item.thumb}}">
+                  <image src="https://api.wx.huhao.me/{{item.thumb}}"></image>
+              </block> -->
+            </view>
+            <view class="news_content_bottom">
+                  <text>{{item.author}}</text>
+                  <text class="icon fa-comment-o"></text>
+                  <text>{{item.views}}</text>  
+                  <text class="icon fa-clock-o"></text>
+                  <text>{{item.time}}</text>
+            </view>
+      </view> 
+    </view>
+</block>
+
+
+
+
 <!--视频  -->
-<!-- <view class="news_content_other">
+ <!-- <view class="news_content_other">
       <view class="news_content_top">
          <text>茶叶品质论：古树茶的品质是否一定优于小树茶？</text> 
       </view>
@@ -167,7 +84,7 @@
             <text class="icon fa-clock-o"></text>
             <text>5小时前</text>
       </view>
-</view> -->
+</view>  -->
 <view style="float:left;margin-top:10px;width:100%;"></view>
 <view class="content_more">
     <text>没有更多了</text>

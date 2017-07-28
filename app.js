@@ -1,4 +1,5 @@
 //app.js
+var http = require('function/http.js')  
 App({
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -26,5 +27,8 @@ App({
   },
   globalData:{
     userInfo:null
-  }
+  },
+  AjaxHttp: {
+    req: http.req
+  } 
 })
